@@ -52,14 +52,16 @@ let body = document.getElementsByTagName("body")[0]
 
 let ul = document.createElement("ul")
 
-for (let i = 0; i< blog.posts.length; i++) {
-    let li = document.createElement("li")
-    let a = document.createElement("a")
-    a.setAttribute("href","/blog/posts"+blog.posts[i].title)
-    a.textContent =blog.posts[i].title
-    li.appendChild(a)
-    ul.appendChild(li)
-}
+setTimeout(() => {
+    for (let i = 0; i< blog.posts.length; i++) {
+        let li = document.createElement("li")
+        let a = document.createElement("a")
+        a.setAttribute("href","/blog/posts"+blog.posts[i].title)
+        a.textContent =blog.posts[i].title
+        li.appendChild(a)
+        ul.appendChild(li)
+    }
+}, 5000)
 
 body.appendChild(ul)
 
