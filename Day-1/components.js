@@ -9,7 +9,6 @@ function p(text){
 }
 
 function button(text, event, callback){
-
     let btn = document.createElement("button");
     btn.textContent = text;
     btn.addEventListener(event, callback);
@@ -23,9 +22,13 @@ function Link(link){
     return document.createElement("a");
 }
 
-function h1(text){
+function h1(text, bg){
     let header= document.createElement("h1");
     header.textContent = text;
+    console.log('====================================');
+    console.log(bg);
+    console.log('====================================');
+    header.style.backgroundColor = bg
     document.body.appendChild(header);
     return header;
 
